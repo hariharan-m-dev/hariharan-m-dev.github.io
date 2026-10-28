@@ -62,11 +62,27 @@
     }
 
     .nav-logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.35rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.05rem;
+      font-weight: 500;
       color: var(--accent);
       letter-spacing: 0.02em;
       text-decoration: none;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 1.05em;
+      background: var(--accent);
+      margin-left: 3px;
+      vertical-align: text-bottom;
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
     }
 
     .nav-links {
@@ -722,7 +738,7 @@
 
   <!-- NAV -->
   <nav id="navbar">
-    <a href="#hero" class="nav-logo">H M</a>
+    <a href="#hero" class="nav-logo">hariharan_m<span class="cursor"></span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -770,7 +786,7 @@
             I'm <strong>Hariharan M</strong>, a Computer Science & Engineering student
             specializing in <strong>Artificial Intelligence & Machine Learning</strong>
             at Rathinam Technical Campus, Coimbatore. I'm currently in my third year
-            with a CGPA of <strong>8.43</strong>.
+            with a CGPA of <strong>8.25</strong>.
           </p>
           <p>
             My primary interest lies in <strong>backend development</strong> — building
@@ -785,7 +801,7 @@
         </div>
         <div class="about-stats reveal delay-2">
           <div class="stat-card">
-            <div class="stat-value">8.43</div>
+            <div class="stat-value">8.25</div>
             <div class="stat-label">Current CGPA</div>
           </div>
           <div class="stat-card">
@@ -793,8 +809,8 @@
             <div class="stat-label">Certified CLF-C02</div>
           </div>
           <div class="stat-card">
-            <div class="stat-value">3+</div>
-            <div class="stat-label">Tech Stacks</div>
+            <div class="stat-value">3</div>
+            <div class="stat-label">Projects Built</div>
           </div>
         </div>
       </div>
@@ -811,7 +827,7 @@
             <div class="skill-tags">
               <span class="skill-tag">Java</span>
               <span class="skill-tag">Python</span>
-              <span class="skill-tag">Bash</span>
+              <span class="skill-tag">JavaScript</span>
               <span class="skill-tag">HTML</span>
               <span class="skill-tag">CSS</span>
             </div>
@@ -820,8 +836,16 @@
             <div class="skill-group-title">Backend & Frameworks</div>
             <div class="skill-tags">
               <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">Flask</span>
               <span class="skill-tag">MVC Architecture</span>
               <span class="skill-tag">CRUD</span>
+            </div>
+          </div>
+          <div class="skill-group reveal delay-2">
+            <div class="skill-group-title">Data & ML</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Pandas</span>
+              <span class="skill-tag">Scikit-learn</span>
             </div>
           </div>
           <div class="skill-group reveal delay-2">
@@ -836,12 +860,6 @@
             <div class="skill-tags">
               <span class="skill-tag">IntelliJ IDEA</span>
               <span class="skill-tag">VS Code</span>
-            </div>
-          </div>
-          <div class="skill-group reveal delay-1">
-            <div class="skill-group-title">OS</div>
-            <div class="skill-tags">
-              <span class="skill-tag">Linux</span>
             </div>
           </div>
           <div class="skill-group reveal delay-2">
@@ -883,6 +901,44 @@
             <span class="project-tag">Java</span>
           </div>
           <a href="https://github.com/Zenitsuagat/expense-tracker" target="_blank" class="project-link">
+            View on GitHub →
+          </a>
+        </div>
+
+        <div class="project-card reveal delay-1">
+          <div class="project-icon">🔗</div>
+          <div class="project-name">URL Shortener with QR Code</div>
+          <p class="project-desc">
+            A full-stack URL shortening service with a Flask REST API backend and a vanilla JS frontend.
+            Supports short-code redirection and QR code generation, with server-side URL validation,
+            base62 short-code generation, and duplicate prevention.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">HTML/CSS</span>
+          </div>
+          <a href="https://github.com/hariharan-m-dev/url-shortener" target="_blank" class="project-link">
+            View on GitHub →
+          </a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-icon">📊</div>
+          <div class="project-name">Loan Approval Prediction</div>
+          <p class="project-desc">
+            A machine learning project that predicts loan approval status on a 614-record dataset.
+            Compared 5 algorithms after data cleaning and label encoding; Logistic Regression
+            performed best with 78.86% accuracy.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Scikit-learn</span>
+            <span class="project-tag">Pandas</span>
+            <span class="project-tag">Google Colab</span>
+          </div>
+          <a href="https://github.com/hariharan-m-dev/loan-approval-prediction" target="_blank" class="project-link">
             View on GitHub →
           </a>
         </div>
